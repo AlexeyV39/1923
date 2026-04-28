@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#120828">
+<title>Memory PRO</title>
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="memory.css">
+</head>
+<body>
+<div id="app">
+<section id="memory" class="screen memory-screen active">
+  <header class="pro-head compact-head">
+    <button class="icon-btn back">←</button>
+    <div class="brand">
+      <div class="brain">🧠</div>
+      <div><h2>Memory <span>PRO</span></h2><p>Найди пары</p></div>
+    </div>
+    <button class="icon-btn" id="memTheme">🎨</button>
+    <button class="icon-btn" id="memBestBtn">🏆</button>
+    <button class="icon-btn" id="memSettings">⚙️</button>
+  </header>
+
+  <div class="compact-actions">
+    <button id="memNew" class="new-btn">↻ Новая игра</button>
+    <button id="memHint" class="hint-btn">💡 <span>Подсказка</span> <em id="hintCount">3</em></button>
+  </div>
+
+  <div class="mem-stats compact-stats">
+    <div><span>👣</span><small>Ходы</small><b id="memMoves">0</b></div>
+    <div><span>▣</span><small>Пары</small><b id="memPairs">0/18</b></div>
+    <div><span>◴</span><small>Время</small><b id="memTime">00:00</b></div>
+  </div>
+
+  <div class="mode-tabs compact-tabs">
+    <button data-memmode="easy">Easy</button>
+    <button data-memmode="normal">Normal</button>
+    <button data-memmode="hard">Hard</button>
+    <button data-memmode="expert" class="on">Expert</button>
+  </div>
+
+  <div id="memoryGrid" class="memory-grid expert"></div>
+
+  <div class="mem-bottom compact-bottom">
+    <button id="memShuffle">🔀 Перемешать</button>
+    <button id="memUndo">↶ Отмена <em id="undoCount">3</em></button>
+    <button id="memSound">🔊</button>
+  </div>
+
+  <div id="modalBackdrop" class="modal-backdrop" hidden>
+    <div class="modal-card">
+      <div class="modal-head">
+        <b id="modalTitle">Меню</b>
+        <button id="modalClose">×</button>
+      </div>
+      <div id="modalBody" class="modal-body"></div>
+    </div>
+  </div>
+
+  <span id="memModeLabel" hidden>Expert 6×6</span>
+  <span id="memStars" hidden>⭐⭐⭐</span>
+  <span id="memBest" hidden>—</span>
+</section>
+</div>
+<script src="memory.js"></script>
+</body>
+</html>

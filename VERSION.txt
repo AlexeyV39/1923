@@ -1,0 +1,3 @@
+Card Games PRO — GitHub Pages Ready
+Base: V6.9 SOLITAIRE BIG CARDS
+Added: .nojekyll, GitHub Pages instructions, manifest relative scope.
