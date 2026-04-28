@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#0d5b35">
+<title>Blackjack PRO</title>
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="blackjack.css">
+</head>
+<body>
+<main class="casino" id="casino">
+  <header class="topbar">
+    <button class="round home" id="homeBtn" aria-label="Игры">🏠</button>
+    <button class="round" id="settingsBtn" aria-label="Настройки">⚙️</button>
+    <div class="wallet"><span>Баланс</span><b id="balance">10000</b><button id="addMoney">+</button></div>
+  </header>
+
+  <section class="felt">
+    <div class="table-title">
+      <b>BLACKJACK</b>
+      <span>Выплата 3:2 · Дилер берёт до 16</span>
+    </div>
+
+    <div class="dealer-zone zone">
+      <div class="zone-title">Дилер <b id="dealerScore">?</b></div>
+      <div id="dealerCards" class="cards"></div>
+    </div>
+
+    <div class="result" id="status">Сделай ставку</div>
+
+    <div class="player-wrap">
+      <div class="hand-zone zone active" data-hand="0">
+        <div class="zone-title">Игрок <b id="playerScore0">0</b></div>
+        <div id="playerCards0" class="cards"></div>
+        <div class="hand-bet">Ставка: <b id="handBet0">0</b></div>
+      </div>
+      <div class="hand-zone zone" data-hand="1" id="splitHand">
+        <div class="zone-title">Рука 2 <b id="playerScore1">0</b></div>
+        <div id="playerCards1" class="cards"></div>
+        <div class="hand-bet">Ставка: <b id="handBet1">0</b></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="bet-panel">
+      <div class="bet-line">СТАВКА: <b id="bet">0</b></div>
+      <div class="chips">
+        <button class="chip chip-blue" data-chip="500"><span>500</span></button>
+        <button class="chip chip-red" data-chip="1000"><span>1000</span></button>
+        <button class="chip chip-green" data-chip="1500"><span>1500</span></button>
+        <button class="chip chip-gold" data-chip="2000"><span>2000</span></button>
+        <button class="chip chip-blue" data-chip="2500"><span>2500</span></button>
+        <button class="chip chip-red" data-chip="3000"><span>3000</span></button>
+        <button class="chip chip-green" data-chip="3500"><span>3500</span></button>
+        <button class="chip chip-gold" data-chip="4000"><span>4000</span></button>
+        <button class="chip chip-blue" data-chip="4500"><span>4500</span></button>
+        <button class="chip chip-gold" data-chip="5000"><span>5000</span></button>
+      </div>
+    </div>
+
+  <nav class="actions pre" id="preActions">
+    <button id="clearBet">СБРОС</button>
+    <button class="gold" id="dealBtn">РАЗДАТЬ</button>
+  </nav>
+
+  <nav class="actions game" id="gameActions" hidden>
+    <button id="insuranceBtn">СТРАХ.</button>
+    <button id="splitBtn">РАЗДЕЛ</button>
+    <button id="doubleBtn">x2</button>
+    <button id="standBtn">СТОП</button>
+    <button id="hitBtn">ЕЩЁ</button>
+  </nav>
+
+  <div class="modal" id="modal" hidden>
+    <div class="modal-card">
+      <div class="modal-head"><b id="modalTitle">Меню</b><button id="modalClose">×</button></div>
+      <div id="modalBody" class="modal-body"></div>
+    </div>
+  </div>
+</main>
+<script src="blackjack.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no"><meta name="theme-color" content="#0b5f38"><title>Косынка PRO</title><link rel="manifest" href="manifest.json"><link rel="stylesheet" href="solitaire.css"></head><body>
+<div id="app">
+<header class="top"><a class="homeBtn" href="index.html" aria-label="Игры">←</a><div><b>Косынка</b><span id="modeBadge">Normal</span></div><div class="stats"><span>⏱ <b id="timer">00:00</b></span><span>↔ <b id="moves">0</b></span><span>★ <b id="score">0</b></span></div></header>
+<section class="toolbar"><button id="menuBtn">☰ Режим</button><button id="newGame">Новая</button><button id="undo">↶</button><button id="hint">💡</button><button id="auto">⚡ Авто</button></section>
+<main id="board"><div class="upper"><div class="slot stock" id="stock"></div><div class="slot waste" id="waste"></div><div class="spacer"></div><div class="foundations" id="foundations"></div></div><div class="tableau" id="tableau"></div></main>
+<section class="bottom"><div>Победы: <b id="wins">0</b></div><div>Лучшее: <b id="best">—</b></div><div>Серия: <b id="streak">0</b></div></section>
+</div>
+<div id="modal" class="modal show"><div class="panel"><h2>Выбери режим</h2><p>Двойной тап по карте — положить в дом или в любой доступный столбец.</p><div class="modes" id="modes"></div><button id="continueBtn" class="wide">Продолжить сохранённую</button></div></div><div id="toast"></div><script src="solitaire_app.js"></script></body></html>
